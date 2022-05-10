@@ -1,0 +1,19 @@
+button.carousel-control-prev {
+    color: #2f0099;
+}
+img {
+    height: 400px;
+    width: 550px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.carousel-inner {
+    align-items: center;
+}
+
+body {
+    background: #2f0099;
+}
