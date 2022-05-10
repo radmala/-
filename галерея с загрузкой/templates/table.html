@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if age < 21 %}
+  {% set age = 'teen' %}
+{% else %}
+  {% set age = 'adult' %}
+{% endif %}
+
+{% set r = range(0, 255) | random %}
+{% set g = range(0, 255) | random %}
+{% set b = range(0, 255) | random %}
+
+
+{% if sex == 'male' or sex == 'female' %}
+<table class="table">
+  <tr>
+    <td>Цвет стен</td>
+    <td>Эмблема</td>
+  </tr>
+  <tr>
+    <td style="background: rgb({{ r }}, {{ g }}, {{ b }})"></td>
+    <td><img src="/static/img/{{ sex }}_{{ age }}.jpg"></td>
+  </tr>
+</table>
+{% else %}
+<p>Пол введен не верно</p>
+{% endif %}
+{% endblock %}
